@@ -1,0 +1,68 @@
+@font-face {
+    font-family: SSP_bold;
+    src: url(assets/fonts/SourceSansPro-Bold.ttf);
+}
+@font-face {
+    font-family: SSP_extraLight;
+    src: url(assets/fonts/SourceSansPro-ExtraLight.ttf);
+}
+@font-face {
+    font-family: SSP_light;
+    src: url(assets/fonts/SourceSansPro-Light.ttf);
+}
+@font-face {
+    font-family: SSP_regular;
+    src: url(assets/fonts/SourceSansPro-Regular.ttf);
+}
+@font-face {
+    font-family: SSP_semiBold;
+    src: url(assets/fonts/SourceSansPro-SemiBold.ttf);
+}
+
+body{
+    background-color: #FFFEF3;
+    margin: 0;
+}
+
+#header{
+    background-color: #F2EDDE;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+#header h1{
+    margin: 0;
+    font-family: SSP_extraLight;
+    font-size: 67px;
+    padding: 15px;
+    letter-spacing: 10px;
+}
+
+#leftNav{
+    transform-origin: left top;
+    transform: rotate(-90deg) translateX(-100%);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: SSP_bold;
+    width: 90vh;
+    justify-content: center;
+    
+}
+
+#leftNav div{
+    width: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    transition: .2s ease;
+}
+
+
+
