@@ -15,9 +15,15 @@ var positionBeforeMax = 85
 var increaseValue = 5
 var lastIncreaseValue = 6
 
+var scrollAfterMax = 0
+
 if (getOS() === "Mac"){
-    
+    increaseValue = 1
+    lastIncreaseValue = 1
+    document.body.style.overflow = "hidden"
 }
+
+console.log(getOS())
 
 addEventListener('wheel', (e) => {
 
@@ -73,6 +79,10 @@ addEventListener('wheel', (e) => {
     }
     
     if (positionMyWork == positionMax) {
+        if (e.wheelDelta < 0){
+            scrollAfterMax++
+        }
+        if (scrollAfterMax = )
         myWorkDone = true
     } else { 
         myWorkDone = false
@@ -83,6 +93,8 @@ addEventListener('wheel', (e) => {
     } else { 
         mySkillsDone = false
     }
+
+    console.log(positionMyWork)
 })
 
 
@@ -90,11 +102,12 @@ addEventListener('wheel', (e) => {
 function getOS() {
     var userAgent = window.navigator.userAgent,
         platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
-        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K', 'macOS'],
         windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
         iosPlatforms = ['iPhone', 'iPad', 'iPod'],
         os = null;
   
+        console.log(platform)
     if (macosPlatforms.indexOf(platform) !== -1) {
       os = 'Mac';
     } else if (iosPlatforms.indexOf(platform) !== -1) {
