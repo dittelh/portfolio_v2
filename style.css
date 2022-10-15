@@ -51,7 +51,8 @@ body{
     align-items: center;
     font-family: SSP_bold;
     width: 90vh;
-    justify-content: center;
+    height: 100vw;
+    justify-content: start;
     
 }
 
@@ -60,10 +61,32 @@ body{
     height: 3vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     border-bottom: 1px solid black;
     transition: .2s ease;
 }
 
+.navH2{
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    background-color: #FFFEF3;
+    padding: 0.7vw;
+}
+
+#aboutMe{
+    background-color: #CFD5BA;
+    z-index: 2;
+}
+
+#mySkills{
+    z-index: 3;
+    background-color: #7E9472;
+}
+
+#myWork{
+    background-color: #CFD5BA;
+    z-index: 4;
+}
 
 
