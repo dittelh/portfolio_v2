@@ -22,6 +22,8 @@
 body{
     background-color: #FFFEF3;
     margin: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #header{
@@ -42,6 +44,11 @@ body{
     letter-spacing: 10px;
 }
 
+#dlhA{
+    text-decoration: none;
+    color: black;
+}
+
 #leftNav{
     transform-origin: left top;
     transform: rotate(-90deg) translateX(-100%);
@@ -53,10 +60,10 @@ body{
     width: 90vh;
     height: 100vw;
     justify-content: start;
-    
+    z-index: 5;
 }
 
-#leftNav div{
+.asideDiv{
     width: 90vh;
     height: 3vw;
     display: flex;
@@ -89,4 +96,104 @@ body{
     z-index: 4;
 }
 
+.contentDiv{
+    /* transform-origin: left top; */
+    transform: rotate(90deg) translateX(-100%); 
+}
 
+.backgroundText{
+    font-size: 300px;
+    position: fixed;
+    right: 100px;
+    color: rgb(242, 237, 222, .3);
+}
+
+
+
+/* Frontpage */
+
+#frontSection{
+    z-index: 1;
+}
+
+#portraitFrontpage{
+    transform: scaleX(-1);
+    height: 90vh;
+    position: absolute;
+    bottom: 0;
+    right: 1vw;
+    z-index: 1;
+}
+
+#frontpageText{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: start;
+    font-size: 160px;
+    margin-right: 15vw;
+    margin-top: 20vh;
+    font-family: SSP_bold;
+    line-height: 1;
+   
+}
+
+@keyframes showTopText {
+    0% { transform: translate3d(0, 100%, 0); }
+    /* 40%, 60% { transform: translate3d(0, 50%, 0); } */
+    100% { transform: translate3d(0, 0, 0); }
+  }
+  @keyframes showBottomText {
+    0% { transform: translate3d(0, -100%, 0); }
+    40%, 60% { transform: translate3d(0, -50%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+  .animated-title {
+    color: #7E9472;
+    font-family: SSP_bold;
+    height: 90vmin;
+    left: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vmin;
+  }
+  .animated-title > div {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  .animated-title > div div {
+    font-size: 12vmin;
+    padding: 2vmin 0;
+    position: absolute;
+  }
+  .animated-title > div div span {
+    display: block;
+  }
+  .animated-title > div.text-top {
+    border-bottom: 2pt solid rgb(0, 0, 0);
+    top: 0;
+  }
+  .animated-title > div.text-top div {
+    animation: showTopText .5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, 100%);
+  }
+  .animated-title > div.text-top div span:first-child {
+    color: #CFD5BA;
+  }
+  .animated-title > div.text-bottom {
+    bottom: 0;
+    line-height: 1
+  }
+  .animated-title > div.text-bottom div {
+    animation: showBottomText 1s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+  }
