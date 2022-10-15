@@ -10,76 +10,102 @@ var positionMyWork = 0
 var myWorkDone = false
 var mySkillsDone = false 
 
+var positionMax = 91
+var positionBeforeMax = 85
+var increaseValue = 5
+var lastIncreaseValue = 6
 
+if (getOS() === "Mac"){
+    
+}
 
 addEventListener('wheel', (e) => {
 
-    // scrollValue += e.wheelDelta 
-    // console.log(scrollValue)
-
     if (positionMySkills == 0){ 
-        if (e.wheelDelta < 0 && positionMyWork < 88) {
-            if (positionMyWork == 85) {
-                positionMyWork += 3
+        if (e.wheelDelta < 0 && positionMyWork < positionMax) {
+            if (positionMyWork == positionBeforeMax) {
+                positionMyWork += lastIncreaseValue
             } else {
-            positionMyWork += 5 
+            positionMyWork += increaseValue 
             }
         } else if(e.wheelDelta > 0 && positionMyWork > 0) {
-            if (positionMyWork == 88) {
-                positionMyWork -= 3
+            if (positionMyWork == positionMax) {
+                positionMyWork -= lastIncreaseValue
             } else {
-            positionMyWork -= 5  
+            positionMyWork -= increaseValue  
             }
         }
         myWork.style.transform = "translateY("+ positionMyWork +"vw)"
     }
 
-    if (positionMyWork == 88 && positionAboutMe == 0 && myWorkDone) {
-        if (e.wheelDelta < 0 && positionMySkills < 88) {
-            if (positionMySkills == 85) {
-                positionMySkills += 3
+    if (positionMyWork == positionMax && positionAboutMe == 0 && myWorkDone) {
+        if (e.wheelDelta < 0 && positionMySkills < positionMax) {
+            if (positionMySkills == positionBeforeMax) {
+                positionMySkills += lastIncreaseValue
             } else {
-                positionMySkills += 5
+                positionMySkills += increaseValue
             }
         } else if(e.wheelDelta > 0 && positionMySkills > 0) {
-            if (positionMySkills == 88) {
-                positionMySkills -= 3
+            if (positionMySkills == positionMax) {
+                positionMySkills -= lastIncreaseValue
             } else {
-            positionMySkills -= 5  
+            positionMySkills -= increaseValue  
             }
         } 
     mySkills.style.transform = "translateY("+ positionMySkills +"vw)"
     }
 
-    if (positionMySkills == 88 && mySkillsDone) {
-        if (e.wheelDelta < 0 && positionAboutMe < 88) {
-            if (positionAboutMe == 85) {
-                positionAboutMe += 3
+    if (positionMySkills == positionMax && mySkillsDone) {
+        if (e.wheelDelta < 0 && positionAboutMe < positionMax) {
+            if (positionAboutMe == positionBeforeMax) {
+                positionAboutMe += lastIncreaseValue
             } else {
-                positionAboutMe += 5
+                positionAboutMe += increaseValue
             }
         } else if(e.wheelDelta > 0 && positionAboutMe > 0) {
-            if (positionAboutMe == 88) {
-                positionAboutMe -= 3
+            if (positionAboutMe == positionMax) {
+                positionAboutMe -= lastIncreaseValue
             } else {
-            positionAboutMe -= 5  
+            positionAboutMe -= increaseValue  
             }
         } 
     aboutMe.style.transform = "translateY("+ positionAboutMe +"vw)"
     }
     
-    if (positionMyWork == 88) {
+    if (positionMyWork == positionMax) {
         myWorkDone = true
     } else { 
         myWorkDone = false
     }
 
-    if (positionMySkills == 88) {
+    if (positionMySkills == positionMax) {
         mySkillsDone = true
     } else { 
         mySkillsDone = false
     }
-    
-    
 })
 
+
+
+function getOS() {
+    var userAgent = window.navigator.userAgent,
+        platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
+        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+        windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+        iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+        os = null;
+  
+    if (macosPlatforms.indexOf(platform) !== -1) {
+      os = 'Mac';
+    } else if (iosPlatforms.indexOf(platform) !== -1) {
+      os = 'iOS';
+    } else if (windowsPlatforms.indexOf(platform) !== -1) {
+      os = 'Windows';
+    } else if (/Android/.test(userAgent)) {
+      os = 'Android';
+    } else if (/Linux/.test(platform)) {
+      os = 'Linux';
+    }
+  
+    return os;
+  }

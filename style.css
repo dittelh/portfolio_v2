@@ -57,6 +57,7 @@ body{
 
 #leftNav div{
     width: 90vh;
+    height: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
