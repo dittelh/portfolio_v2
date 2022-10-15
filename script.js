@@ -22,6 +22,7 @@ if (getOS() === "Mac"){
     increaseValue = 1
     lastIncreaseValue = 1
     document.body.style.overflow = "hidden"
+    totalScrollsAfterMax = 40
 }
 
 console.log(getOS())
@@ -82,7 +83,6 @@ addEventListener('wheel', (e) => {
     if (positionMyWork == positionMax) {
         if (e.wheelDelta < 0 && positionMySkills === 0) {
             scrollAfterMax++   
-            
         }
         if (scrollAfterMax === totalScrollsAfterMax ) {
             myWorkDone = true 
@@ -107,8 +107,6 @@ addEventListener('wheel', (e) => {
     if (e.wheelDelta > 0){
         scrollAfterMax = 0
     }
-
- console.log(scrollAfterMax)
 })
 
 
