@@ -16,6 +16,7 @@ var increaseValue = 5
 var lastIncreaseValue = 6
 
 var scrollAfterMax = 0
+var totalScrollsAfterMax = 8
 
 if (getOS() === "Mac"){
     increaseValue = 1
@@ -79,22 +80,35 @@ addEventListener('wheel', (e) => {
     }
     
     if (positionMyWork == positionMax) {
-        if (e.wheelDelta < 0){
-            scrollAfterMax++
+        if (e.wheelDelta < 0 && positionMySkills === 0) {
+            scrollAfterMax++   
+            
         }
-        if (scrollAfterMax = )
-        myWorkDone = true
-    } else { 
+        if (scrollAfterMax === totalScrollsAfterMax ) {
+            myWorkDone = true 
+            scrollAfterMax = 0
+        }
+    } else {
         myWorkDone = false
     }
 
     if (positionMySkills == positionMax) {
-        mySkillsDone = true
+        if (e.wheelDelta < 0){
+            scrollAfterMax++
+        }
+        if (scrollAfterMax === totalScrollsAfterMax) {
+           mySkillsDone = true 
+           scrollAfterMax = 0
+        } 
     } else { 
         mySkillsDone = false
     }
 
-    console.log(positionMyWork)
+    if (e.wheelDelta > 0){
+        scrollAfterMax = 0
+    }
+
+ console.log(scrollAfterMax)
 })
 
 
