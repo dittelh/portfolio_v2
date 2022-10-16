@@ -39,7 +39,7 @@ body{
 #header h1{
     margin: 0;
     font-family: SSP_extraLight;
-    font-size: 67px;
+    font-size: 40px;
     padding: 15px;
     letter-spacing: 10px;
 }
@@ -47,6 +47,8 @@ body{
 #dlhA{
     text-decoration: none;
     color: black;
+    z-index: 10;
+
 }
 
 #leftNav{
@@ -67,7 +69,8 @@ body{
     width: 90vh;
     height: 3vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column-reverse;
+    justify-content: end;
     align-items: end;
     border-bottom: 1px solid black;
     transition: .2s ease;
@@ -98,14 +101,24 @@ body{
 
 .contentDiv{
     /* transform-origin: left top; */
-    transform: rotate(90deg) translateX(-100%); 
+    /* transform: rotate(90deg); */
+    writing-mode: vertical-rl;
+    height: 100%;
+    width: 100%; 
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
 }
 
 .backgroundText{
     font-size: 300px;
-    position: fixed;
-    right: 100px;
     color: rgb(242, 237, 222, .3);
+    margin: 0;
+    text-align: right;
+    line-height: 1;
+    position: absolute;
+    top: 95vh;
+    left: 0vh;
 }
 
 

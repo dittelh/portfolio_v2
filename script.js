@@ -17,6 +17,8 @@ var lastIncreaseValue = 6
 
 var scrollAfterMax = 0
 var totalScrollsAfterMax = 8
+var scrollAfterMin = 0;
+var totalScrollsAfterMin = 8
 
 if (getOS() === "Mac"){
     increaseValue = 1
@@ -35,7 +37,7 @@ addEventListener('wheel', (e) => {
             } else {
             positionAboutMe += increaseValue 
             }
-        } else if(e.wheelDelta > 0 && positionAboutMe > 3) {
+        } else if(e.wheelDelta > 0 && positionAboutMe > 3 && (scrollAfterMin === totalScrollsAfterMin || !aboutMeDone)) {
             if (positionAboutMe == positionMax) {
                 positionAboutMe -= lastIncreaseValue
             } else {
@@ -53,7 +55,7 @@ addEventListener('wheel', (e) => {
             } else {
                 positionMySkills += increaseValue
             }
-        } else if(e.wheelDelta > 0 && positionMySkills > 3) {
+        } else if(e.wheelDelta > 0 && positionMySkills > 3 && (scrollAfterMin === totalScrollsAfterMin || !mySkillsDone)) {
             if (positionMySkills == positionMax) {
                 positionMySkills -= lastIncreaseValue
             } else {
@@ -112,6 +114,24 @@ addEventListener('wheel', (e) => {
         mySkillsDone = false
         mySkills.style.position = "unset"
         mySkills.style.bottom = "unset"
+    }
+
+    if(aboutMeDone && positionMySkills === 3){
+        if(e.wheelDelta > 0){
+            scrollAfterMin++;
+        } else {
+            scrollAfterMin = 0;
+        }
+    }
+    if(mySkillsDone && positionMyWork === 3){
+        if(e.wheelDelta > 0){
+            scrollAfterMin++;
+        } else {
+            scrollAfterMin = 0;
+        }
+    }
+    if(scrollAfterMin - 1 === totalScrollsAfterMin){
+        scrollAfterMin = 0;
     }
 
     if (e.wheelDelta > 0){
