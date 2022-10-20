@@ -162,4 +162,9 @@ function getOS() {
     }
   
     return os;
-  }
+}
+
+
+function contactClick(){
+    document.getElementById.t
+}
