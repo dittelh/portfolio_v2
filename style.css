@@ -130,11 +130,11 @@ body{
 }
 
 #portraitFrontpage{
-    transform: scaleX(-1);
-    height: 90vh;
+    /* transform: scaleX(-1); */
+    height: 100vh;
     position: absolute;
     bottom: 0;
-    right: 1vw;
+    right: 0;
     z-index: 1;
 }
 
