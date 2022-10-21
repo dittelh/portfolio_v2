@@ -7,7 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Ditte Lykke Hansens - Portfolio</title>
+    <meta name="title" content="Ditte Lykke Hansens - Portfolio">
+    <meta name="description" content="A multimedia designers portfolio">
+    <meta property="og:title" content="Ditte Lykke Hansens - Portfolio">
+    <meta property="og:description" content="A multimedia designers portfolio">
+    <meta property="og:url" content="https://devditte.dk/index.html">
+    <meta name="og:site_name" content="Devditte.dk">
+    <meta property="og:locale" content="da_DK">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/dlh.png">
 </head>
 <body>
     <header id="header">
@@ -42,8 +51,8 @@
                         <h3>Videos</h3>
                         <div class="slideShow">
                             <i id="arrowLeftVideo" class="fas fa-angle-left arrow arrowLeft" onclick="previousImageVideo()"></i>
-                            <a href="https://www.youtube.com/watch?v=UnFRl5OJapw&ab_channel=SlyandTheMan" target="_blank"><img id="image4" src="assets/img/video/Tegnebræt 8.png" alt="Video" class="designImage imageActive"></a>
-                            <a href="https://www.youtube.com/watch?v=iUYsGNpwY2U&ab_channel=DitteHansen" target="_blank"><img id="image5" src="assets/img/video/Tegnebræt 9.png" alt="Video" class="designImage"></a>
+                            <a href="https://www.youtube.com/watch?v=UnFRl5OJapw&ab_channel=SlyandTheMan" target="_blank"><img id="image4" src="assets/img/video/video1.png" alt="Video" class="designImage imageActive"></a>
+                            <a href="https://www.youtube.com/watch?v=iUYsGNpwY2U&ab_channel=DitteHansen" target="_blank"><img id="image5" src="assets/img/video/video0.png" alt="Video" class="designImage"></a>
                             <i id="arrowRightVideo" class="fas fa-angle-right arrow arrowRight" onclick="nextImageVideo()"></i>
                         </div>
                         <div class="dots">
@@ -55,9 +64,9 @@
                         <h3>Code</h3>
                         <div class="slideShow">
                             <i id="arrowLeftCode" class="fas fa-angle-left arrow arrowLeft" onclick="previousImageCode()"></i>
-                            <img id="image6" src="assets/img/code/Tegnebræt 5.png" alt="Code" class="designImage imageActive">
-                            <img id="image7" src="assets/img/code/Tegnebræt 6.png" alt="Code" class="designImage">
-                            <img id="image8" src="assets/img/code/Tegnebræt 7.png" alt="Code" class="designImage">
+                            <img id="image6" src="assets/img/code/code0.png" alt="Code" class="designImage imageActive">
+                            <img id="image7" src="assets/img/code/code1.png" alt="Code" class="designImage">
+                            <img id="image8" src="assets/img/code/code2.png" alt="Code" class="designImage">
                             <i id="arrowRightCode" class="fas fa-angle-right arrow arrowRight" onclick="nextImageCode()"></i>
                         </div>
                         <div class="dots">
@@ -132,7 +141,12 @@
             <a href="mailto:dittehansen143@gmail.com"><svg class="svgIcons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
         </div>
     </div>
-    <section id="frontSection">
+    <div id="frontSection">
+        <div class="scroll-downs">
+            <div class="mousey">
+              <div class="scroller"></div>
+            </div>
+          </div>
         <div class="animated-title">
             <div class="text-top">
               <div>
@@ -147,7 +161,7 @@
             </div>
           </div>
         <img id="portraitFrontpage" src="assets/img/ditteCom2.png" alt="Ditte">
-    </section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
