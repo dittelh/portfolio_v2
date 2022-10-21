@@ -218,6 +218,7 @@ function previousImage(){
 // Slideshow video
 
 var activeIdVideo = 4;
+console.log(activeIdVideo)
 
 function nextImageVideo(){
     if(activeIdVideo !== 5){
@@ -225,7 +226,7 @@ function nextImageVideo(){
     } else {
         activeIdVideo = 4;
     }
-
+console.log(activeIdVideo)
 
     for (let i = 4; i < 6; i++) {
         if(i == activeIdVideo){
@@ -244,6 +245,8 @@ function previousImageVideo(){
     } else {
         activeIdVideo = 5;
     }
+    console.log(activeIdVideo)
+
 
     for (let i = 4; i < 6; i++) {
         if(i == activeIdVideo){
@@ -260,18 +263,18 @@ function previousImageVideo(){
 
 // Slideshow code
 
-var activeIdVideo = 6;
+var activeIdCode = 6;
 
 function nextImageCode(){
-    if(activeIdVideo !== 7){
-        activeIdVideo = activeIdVideo + 1;
+    if(activeIdCode !== 8){
+        activeIdCode = activeIdCode + 1;
     } else {
-        activeIdVideo = 6;
+        activeIdCode = 6;
     }
 
 
     for (let i = 6; i < 9; i++) {
-        if(i == activeIdVideo){
+        if(i == activeIdCode){
             document.getElementById('image' + i).classList.add('imageActive');
             document.getElementById('dot' + i).classList.add('dotActive');
         } else {
@@ -282,14 +285,14 @@ function nextImageCode(){
 }
 
 function previousImageCode(){
-    if(activeIdVideo !== 6){
-        activeIdVideo = activeIdVideo - 1;
+    if(activeIdCode !== 6){
+        activeIdCode = activeIdCode - 1;
     } else {
-        activeIdVideo = 7;
+        activeIdCode = 8;
     }
 
     for (let i = 6; i < 9; i++) {
-        if(i == activeIdVideo){
+        if(i == activeIdCode){
             document.getElementById('image' + i).classList.add('imageActive');
             document.getElementById('dot' + i).classList.add('dotActive');
         } else {

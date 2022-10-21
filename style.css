@@ -368,6 +368,7 @@ body{
     display: flex;
     align-items: center;
     width: 40vh;
+    justify-content: center;
     
 }
 
@@ -377,7 +378,6 @@ body{
 
 .designImage{
     width: 100%;
-    margin: 5% 5% 0 5%;
     object-fit: contain;
     display: none;
     transform: rotate(90deg);
