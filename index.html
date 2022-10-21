@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Ditte Lykke Hansen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Ditte Lykke Hansens - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,9 +18,56 @@
             <h2 class="navH2">
                 My previous work
             </h2>
-            <div class="contentDiv">
-                <p>Her skal jeg vise tidligere projekter</p>
-                <p class="backgroundText">My previous<br>work</p>
+            <div class="contentDiv workContent">
+                <h2 id="workH2">Some of my previous work</h2>
+                <div id="workContainer">
+                    <section id="designDiv" class="slideShowSection">
+                        <h3>Design</h3>
+                        <div class="slideShow">
+                            <i id="arrowLeft" class="fas fa-angle-left arrow arrowLeft" onclick="previousImage()"></i>
+                            <img id="image0" src="assets/img/design/design0.png" alt="Plakater" class="designImage imageActive">
+                            <img id="image1" src="assets/img/design/design1.png" alt="Craftd logo" class="designImage">
+                            <img id="image2" src="assets/img/design/design2.png" alt="Hygieia logo" class="designImage">
+                            <img id="image3" src="assets/img/design/design3.png" alt="Trækunst logo" class="designImage">
+                            <i id="arrowRight" class="fas fa-angle-right arrow arrowRight" onclick="nextImage()"></i>
+                        </div>
+                        <div class="dots">
+                            <span id="dot0" class="dot dotActive"></span>
+                            <span id="dot1" class="dot"></span>
+                            <span id="dot2" class="dot"></span>
+                            <span id="dot3" class="dot"></span>
+                        </div>
+                    </section>
+                    <section id="videoDiv" class="slideShowSection">
+                        <h3>Videos</h3>
+                        <div class="slideShow">
+                            <i id="arrowLeftVideo" class="fas fa-angle-left arrow arrowLeft" onclick="previousImageVideo()"></i>
+                            <img id="image4" src="assets/img/video/Tegnebræt 8.png" alt="Video" class="designImage imageActive">
+                            <img id="image5" src="assets/img/video/Tegnebræt 9.png" alt="Video" class="designImage">
+                            <i id="arrowRightVideo" class="fas fa-angle-right arrow arrowRight" onclick="nextImageVideo()"></i>
+                        </div>
+                        <div class="dots">
+                            <span id="dot4" class="dot dotActive"></span>
+                            <span id="dot5" class="dot"></span>
+                        </div>
+                    </section>
+                    <section id="codeDiv" class="slideShowSection">
+                        <h3>Code</h3>
+                        <div class="slideShow">
+                            <i id="arrowLeftCode" class="fas fa-angle-left arrow arrowLeft" onclick="previousImageCode()"></i>
+                            <img id="image6" src="assets/img/code/Tegnebræt 5.png" alt="Code" class="designImage imageActive">
+                            <img id="image7" src="assets/img/code/Tegnebræt 6.png" alt="Code" class="designImage">
+                            <img id="image8" src="assets/img/code/Tegnebræt 7.png" alt="Code" class="designImage">
+                            <i id="arrowRightCode" class="fas fa-angle-right arrow arrowRight" onclick="nextImageCode()"></i>
+                        </div>
+                        <div class="dots">
+                            <span id="dot6" class="dot dotActive"></span>
+                            <span id="dot7" class="dot"></span>
+                            <span id="dot8" class="dot"></span>
+                        </div>
+                    </section>
+                </div>
+                <!-- <p class="backgroundText workBackText">My previous<br>work</p> -->
             </div>
         </div>
         <div id="mySkills" class="asideDiv">
@@ -27,8 +75,22 @@
                 Tools
             </h2>
             <div class="contentDiv">
-                <p>Hej her skal der stå tools</p>
-                <p class="backgroundText">Tools</p>
+                <div id="toolsContainer">
+                    <h2>These are my most used tools</h2>
+                    <div id="codeBox">
+                        <p id="htmlP">HTML5</p>
+                        <p id="cssP">CSS3</p>
+                        <p id="jsP">JavaScript</p>
+                    </div>
+                    <div id="designBox">
+                        <p id="idP">InDesign</p>
+                        <p id="xdP">Adobe XD</p>
+                        <p id="iaP">Illustrator</p>
+                        <p id="psP">Photoshop</p>
+                        <p id="aeP">After Effects</p>
+                    </div>
+                </div>
+                <p class="backgroundText toolsBackText">Tools</p>
             </div>
         </div>
         <div id="aboutMe" class="asideDiv">
@@ -36,7 +98,23 @@
                 About me
             </h2>
             <div class="contentDiv">
-                <p>hej jeg hedder ditte og er 25 år gammel</p>
+                <div id="aboutMeContainer">
+                    <div id="profileDiv">
+                        <h2>My profile</h2>
+                        <p>The multimedia education has really opened my eyes for even more creative ways to express yourself. 
+                            I'm looking forward to contribute with my ideas and the skills I have learned but also to learn even more.
+                            Graphical design definitely catches my interest and I would love to evovle myself with making graphical content to various channels.
+                            In a team am I helpful, positive and ambitious. The coolest about this business is that you will never finish learning and that's definitely something I value.
+                            My first language is Danish but I speak fluent English and some german.</p>
+                    </div>
+                    <div id="personallyDiv">
+                        <h2>My personally</h2>
+                        <p>I live in a small city named Fensmark right outside Næstved. Here I live with my boyfriend and our two lovely dogs.
+                            I have many different interests and I love to learn new things.
+                            I love animals and some day I dream about having my own small farm and in that connection I have started to learn ride.
+                            In the summer I enjoy a nice ride on my motorcycle and when the weather isn't for that I craft various things in my workshop. Besides that I play some videogames and my boyfriend and I enjoy developing small code projects and apps in our freetime.</p>
+                    </div>
+                </div>
                 <p class="backgroundText">About<br>me</p>
             </div>
         </div>
@@ -45,13 +123,13 @@
         <p>Contact me  <br> here!</p>
     </div>
     <div id="contactBox">
-        <img onclick="" id="cross" src="assets/img/cross-square-button.png" alt="Kryds">
+        <img onclick="contactClick()" id="cross" src="assets/img/cross-square-button.png" alt="Kryds">
         <h2>Let me hear from you!</h2>
-        <p>dittehansen143@gmail.com</p>
+        <a id="mailLink" href="mailto:dittehansen143@gmail.com"><p>dittehansen143@gmail.com</p></a>
         <div id="svgDiv">
             <a href="https://github.com/dittelh" target="_blank"><svg class="svgIcons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg></a>
-            <a href="" target="_blank"><svg class="svgIcons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
-            <a href="" target="_blank"><svg class="svgIcons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
+            <a href="https://www.linkedin.com/in/dittelh/" target="_blank"><svg class="svgIcons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+            <a href="mailto:dittehansen143@gmail.com"><svg class="svgIcons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
         </div>
     </div>
     <section id="frontSection">

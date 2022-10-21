@@ -164,7 +164,138 @@ function getOS() {
     return os;
 }
 
+var contactBox = document.getElementById("contactBox")
 
 function contactClick(){
-    document.getElementById.t
+    contactBox.classList.toggle("contactBoxShow")
 }
+
+
+
+// Slideshow design
+
+var activeId = 0;
+
+function nextImage(){
+    if(activeId !== 3){
+        activeId = activeId + 1;
+    } else {
+        activeId = 0;
+    }
+
+
+    for (let i = 0; i < 4; i++) {
+        if(i == activeId){
+            document.getElementById('image' + i).classList.add('imageActive');
+            document.getElementById('dot' + i).classList.add('dotActive');
+        } else {
+            document.getElementById('image' + i).classList.remove('imageActive');
+            document.getElementById('dot' + i).classList.remove('dotActive');
+        }
+    }
+}
+
+function previousImage(){
+    if(activeId !== 0){
+        activeId = activeId - 1;
+    } else {
+        activeId = 3;
+    }
+
+    for (let i = 0; i < 4; i++) {
+        if(i == activeId){
+            document.getElementById('image' + i).classList.add('imageActive');
+            document.getElementById('dot' + i).classList.add('dotActive');
+        } else {
+            document.getElementById('image' + i).classList.remove('imageActive');
+            document.getElementById('dot' + i).classList.remove('dotActive');
+        }
+    }
+}
+
+
+
+// Slideshow video
+
+var activeIdVideo = 4;
+
+function nextImageVideo(){
+    if(activeIdVideo !== 5){
+        activeIdVideo = activeIdVideo + 1;
+    } else {
+        activeIdVideo = 4;
+    }
+
+
+    for (let i = 4; i < 6; i++) {
+        if(i == activeIdVideo){
+            document.getElementById('image' + i).classList.add('imageActive');
+            document.getElementById('dot' + i).classList.add('dotActive');
+        } else {
+            document.getElementById('image' + i).classList.remove('imageActive');
+            document.getElementById('dot' + i).classList.remove('dotActive');
+        }
+    }
+}
+
+function previousImageVideo(){
+    if(activeIdVideo !== 4){
+        activeIdVideo = activeIdVideo - 1;
+    } else {
+        activeIdVideo = 5;
+    }
+
+    for (let i = 4; i < 6; i++) {
+        if(i == activeIdVideo){
+            document.getElementById('image' + i).classList.add('imageActive');
+            document.getElementById('dot' + i).classList.add('dotActive');
+        } else {
+            document.getElementById('image' + i).classList.remove('imageActive');
+            document.getElementById('dot' + i).classList.remove('dotActive');
+        }
+    }
+}
+
+
+
+// Slideshow code
+
+var activeIdVideo = 6;
+
+function nextImageCode(){
+    if(activeIdVideo !== 7){
+        activeIdVideo = activeIdVideo + 1;
+    } else {
+        activeIdVideo = 6;
+    }
+
+
+    for (let i = 6; i < 9; i++) {
+        if(i == activeIdVideo){
+            document.getElementById('image' + i).classList.add('imageActive');
+            document.getElementById('dot' + i).classList.add('dotActive');
+        } else {
+            document.getElementById('image' + i).classList.remove('imageActive');
+            document.getElementById('dot' + i).classList.remove('dotActive');
+        }
+    }
+}
+
+function previousImageCode(){
+    if(activeIdVideo !== 6){
+        activeIdVideo = activeIdVideo - 1;
+    } else {
+        activeIdVideo = 7;
+    }
+
+    for (let i = 6; i < 9; i++) {
+        if(i == activeIdVideo){
+            document.getElementById('image' + i).classList.add('imageActive');
+            document.getElementById('dot' + i).classList.add('dotActive');
+        } else {
+            document.getElementById('image' + i).classList.remove('imageActive');
+            document.getElementById('dot' + i).classList.remove('dotActive');
+        }
+    }
+}
+

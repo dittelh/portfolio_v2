@@ -24,6 +24,7 @@ body{
     margin: 0;
     height: 100vh;
     overflow: hidden;
+    cursor: default;
 }
 
 #header{
@@ -91,7 +92,7 @@ body{
 
 #mySkills{
     z-index: 3;
-    background-color: #7E9472;
+    background-color: #CFD5BA;
 }
 
 #myWork{
@@ -121,6 +122,287 @@ body{
     left: 0vh;
 }
 
+.toolsBackText{
+    top: 105vh;
+}
+
+.workBackText{
+    top: 2vh;
+    text-align: left;
+    z-index: 5;
+}
+
+
+
+
+
+/* About me content */
+
+#aboutMeContainer{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#profileDiv{
+    display: flex;
+    flex-direction: column;
+    height: 25vw;
+    position: absolute;
+    top: 32vh;
+    right: 12vh;
+    /* flex-wrap: wrap; */
+}
+
+#personallyDiv{
+    display: flex;
+    flex-direction: column;
+    height: 25vw;
+    position: absolute;
+    top: 102vh;
+    right: 12vh;
+    /* flex-wrap: wrap; */
+}
+
+#profileDiv h2, #personallyDiv h2 {
+    font-size: 30px;
+    margin-left: 0%;
+}
+
+#profileDiv p, #personallyDiv p {
+    white-space: pre-line;
+    font-size: 25px;
+    font-family: SSP_Light;
+    line-height: 1.4;
+}
+
+
+
+
+
+/* Tools  content*/
+
+#toolsContainer{
+    position: absolute;
+    top: 50vh;
+    right: 12vh;
+    height: 100vh;
+    text-align: center;
+}
+
+#toolsContainer h2{
+    font-size: 30px;
+    margin-left: 10%;
+}
+
+#codeBox{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    margin-left: 5%;
+}
+
+#designBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#codeBox p,  #designBox p{
+    font-size: 25px;
+    font-family: SSP_Light;
+    line-height: 1.4;
+}
+
+#htmlP{
+    background-color: #EB3E00;
+    transition: all .1s;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#cssP{
+    background-color: #0093D2;
+    transition: all .1s;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#jsP{
+    background-color: #F7D100;
+    transition: all .1s;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#idP{
+    background-color: #FF408C;
+    transition: all .1s;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#xdP{
+    background-color: #FF2BC2;
+    transition: all .1s;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#iaP{
+    background-color: #FF7C00;
+    transition: all .1s;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#psP{
+    background-color: #00C8FF;
+    transition: all .1s;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#aeP{
+    background-color: #D291FF;
+    transition: all .1s;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#htmlP:hover{
+   transform: scale(1.2);
+   font-family: SSP_bold;
+}
+
+#cssP:hover{
+   transform: scale(1.2);
+   font-family: SSP_bold;
+}
+
+#jsP:hover{
+   transform: scale(1.2);
+   font-family: SSP_bold;
+}
+
+#idP:hover{
+   transform: scale(1.2);
+   font-family: SSP_bold;
+}
+
+#xdP:hover{
+   transform: scale(1.2);
+   font-family: SSP_bold;
+}
+
+#iaP:hover{
+   transform: scale(1.2);
+   font-family: SSP_bold;
+}
+
+#psP:hover{
+   transform: scale(1.2);
+   font-family: SSP_bold;
+}
+
+#aeP:hover{
+   transform: scale(1.2);
+   font-family: SSP_bold;
+}
+
+
+
+
+
+/* My previous work content */
+
+#workContainer{
+    display: flex;
+    margin-right: 5%;
+    height: 80vh;
+    position: absolute;
+    top: 12vh;
+    right: 15vh;
+}
+
+.workContent{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#workH2{
+    font-size: 30px;
+}
+
+/* Design slideshow */
+
+.slideShowSection{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.3);
+    width: 50vh;
+    height: 50vh;
+}
+
+.slideShow{
+    display: flex;
+    align-items: center;
+    width: 40vh;
+    
+}
+
+.designImage{
+    width: 100%;
+    margin: 5% 5% 0 5%;
+    object-fit: contain;
+    display: none;
+    transform: rotate(90deg);
+}
+.imageActive{
+    display: block;
+}
+
+.arrow{
+    font-size: 2.5rem;
+}
+
+.arrow:hover{
+    cursor: pointer;
+}
+
+.dots{
+    margin-top: 1rem;
+}
+
+.dot{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #7E9472;
+    border-radius: 50%;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.dotActive{
+    background-color: #49533A;
+}
+
+.arrowLeft{
+    transform: rotate(90deg);  
+}
+
+.arrowRight{
+    transform: rotate(90deg);
+}
 
 
 /* Frontpage */
@@ -162,10 +444,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all .3s;
 }
 
 #contactBtn:hover{
     cursor: pointer;
+    transform: scale(1.2);
 }
 
 #contactBtn p{
@@ -182,18 +466,24 @@ body{
 }
 
 #contactBox{
-    background-color: #7E9472;
+    display: none;
+}
+
+.contactBoxShow{
+    display: flex !important;
+    background-color: #F2EDDE;
     width: 40%;
     height: 50%;
     z-index: 20;
     position: absolute;
     top: 25%;
     left: 29%;
-    display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     border-radius: 5px;
+    box-shadow: 0 0 15px rgb(29, 29, 29);
+    animation: slideUpContactBox .5s;
 }
 
 #contactBox h2{
@@ -228,10 +518,34 @@ body{
 
 .svgIcons{
     width: 35%;
+    transition: all .3s;
 }
 
 .svgIcons:hover{
-    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#mailLink{
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+#mailLink:hover{
+    transform: scale(1.1);
+}
+
+@keyframes slideUpContactBox {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 
