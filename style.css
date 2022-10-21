@@ -335,6 +335,7 @@ body{
 
 #workH2{
     font-size: 30px;
+    margin-right: 5%;
 }
 
 /* Design slideshow */
@@ -358,6 +359,10 @@ body{
     align-items: center;
     width: 40vh;
     
+}
+
+.slideShow a{
+    width: 100%;
 }
 
 .designImage{
