@@ -25,6 +25,16 @@ body{
     height: 100vh;
     overflow: hidden;
     cursor: default;
+    animation: bodyAni 1.5s;
+}
+
+@keyframes bodyAni {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #header{
