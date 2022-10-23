@@ -341,6 +341,13 @@ body{
     text-align: center;
     justify-content: center;
     overflow: hidden;
+    position: relative;
+}
+
+.workWrapper {
+    position: absolute;
+    top: 1vh;
+    height: 90vw;
 }
 
 #workH2{
@@ -689,4 +696,152 @@ body{
         margin-bottom: 15%;
     }
 
+}
+
+@media only screen and (max-width: 1540px) and (max-height: 790px){
+    
+    .backgroundText{
+        top: 60vh;
+    }
+
+    /* About me */
+
+    #profileDiv{
+        height: 30vw;
+        top: 20vh;
+        right: 15vh;
+    }
+
+    #personallyDiv{
+        height: 35vw;
+        top: 88vh;
+        right: 15vh;
+    }
+
+    #profileDiv h2, #personallyDiv h2 {
+        font-size: 25px;
+        margin-left: 0%;
+    }
+    
+    #profileDiv p, #personallyDiv p {
+        white-space: pre-line;
+        font-size: 20px;
+        font-family: SSP_Light;
+        line-height: 1.4;
+    }
+
+
+    /* Tools */
+
+    .toolsBackText{
+        top: 70vh;
+        z-index: 1;
+    }
+
+    #toolsContainer{
+        z-index: 5;
+        top: 33vh;
+    }
+
+    #toolsContainer h2{
+        font-size: 25px;
+    }
+
+    #codeBox p, #designBox p{
+        font-size: 20px;
+    }
+
+    /* My work */
+
+    #workH2{
+        font-size: 25px;
+    }
+
+    .arrow{
+        font-size: 2rem;
+    }
+
+    .slideShow{
+        width: 30vh;
+    }
+
+    #workContainer{
+        gap: 5%;
+    }
+
+}
+
+
+@media screen and (max-width: 1540px) and (max-height: 690px){
+
+    .backgroundText{
+        top: 70vh;
+        font-size: 300px;
+    }
+
+    /* About me */
+
+    #profileDiv{
+        height: 35vw;
+        top: 13vh;
+        right: 15vh;
+    }
+
+    #personallyDiv{
+        height: 35vw;
+        top: 105vh;
+        right: 15vh;
+    }
+
+    #profileDiv h2, #personallyDiv h2 {
+        font-size: 25px;
+        margin-left: 0%;
+    }
+    
+    #profileDiv p, #personallyDiv p {
+        white-space: pre-line;
+        font-size: 20px;
+        font-family: SSP_Light;
+        line-height: 1.4;
+    }
+
+
+    /* Tools */
+
+    .toolsBackText{
+        top: 85vh;
+        z-index: 1;
+    }
+
+    #toolsContainer{
+        z-index: 5;
+        top: 48vh;
+    }
+
+    #toolsContainer h2{
+        font-size: 25px;
+    }
+
+    #codeBox p, #designBox p{
+        font-size: 20px;
+    }
+
+
+    /* My work */
+
+    #workH2{
+        font-size: 25px;
+    }
+
+    .arrow{
+        font-size: 2rem;
+    }
+
+    .slideShow{
+        width: 35vh;
+    }
+
+    #workContainer{
+        gap: 9%;
+    }
 }

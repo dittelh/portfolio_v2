@@ -24,7 +24,7 @@ if (getOS() === "Mac"){
     increaseValue = 1
     lastIncreaseValue = 1
     document.body.style.overflow = "hidden"
-    totalScrollsAfterMax = 40
+    totalScrollsAfterMax = 30
 }
 
 
@@ -144,7 +144,7 @@ addEventListener('wheel', (e) => {
 function getOS() {
     var userAgent = window.navigator.userAgent,
         platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
-        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K', 'macOS'],
+        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K', 'macOS', 'Android'],
         windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
         iosPlatforms = ['iPhone', 'iPad', 'iPod'],
         os = null;
@@ -160,7 +160,7 @@ function getOS() {
     } else if (/Linux/.test(platform)) {
       os = 'Linux';
     }
-  
+
     return os;
 }
 
