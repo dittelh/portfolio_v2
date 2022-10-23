@@ -673,7 +673,7 @@ body{
     display: none;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1200px){
     .hideMobile{
         background-color: #FFFEF3;
         display: flex;
